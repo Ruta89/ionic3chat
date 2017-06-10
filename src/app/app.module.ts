@@ -10,6 +10,8 @@ import { HomePage } from '../pages/home/home';
 import { config } from '../config/config';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AuthProvider } from '../providers/auth/auth';
+import { UserProvider } from '../providers/user/user';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { AngularFireAuth } from 'angularfire2/auth';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AngularFireAuth
+    AngularFireAuth,
+    AuthProvider,
+    UserProvider
   ]
 })
 export class AppModule {}
