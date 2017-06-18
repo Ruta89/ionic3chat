@@ -10,7 +10,7 @@ export class AuthProvider {
     console.log('Hello AuthProvider Provider');
   }
 
-  login(credentials: usercreds){
+  login(credentials: usercreds) {
     var promise = new Promise((resolve, reject) => {
       this.afireauth.auth.signInWithEmailAndPassword(credentials.email, credentials.password)
         .then(() => {

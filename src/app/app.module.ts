@@ -20,7 +20,7 @@ import { UserProvider } from '../providers/user/user';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp, {tabsPlacement: 'top'}),
+    IonicModule.forRoot(MyApp, { tabsPlacement: 'top' }),
     AngularFireModule.initializeApp(config.firebase)
   ],
   bootstrap: [IonicApp],
@@ -31,10 +31,10 @@ import { UserProvider } from '../providers/user/user';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     AngularFireAuth,
     AuthProvider,
     UserProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }
