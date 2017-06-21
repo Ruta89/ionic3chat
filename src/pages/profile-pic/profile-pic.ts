@@ -11,8 +11,12 @@ import { UserProvider } from '../../providers/user/user';
 export class ProfilePicPage {
   imgurl = 'https://firebasestorage.googleapis.com/v0/b/mojabaza1-958ea.appspot.com/o/chatterplace.png?alt=media&token=8337737f-428d-4159-9d29-c706a71f4858';
   moveon: boolean = true;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public imgservice: ImghandlerProvider,
-    public zone: NgZone, public userservice: UserProvider, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public imgservice: ImghandlerProvider,
+    public zone: NgZone,
+    public userservice: UserProvider,
+    public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {

@@ -26,7 +26,7 @@ export class SignupPage {
       toaster.setMessage('Wszystkie pola sa wymagane');
       toaster.present();
     }
-    else if (this.newuser.password.length < 7) {
+    else if (this.newuser.password.length < 6) {
       toaster.setMessage('Slabe haslo. Haslo musi posiadac przynajmniej 6 znakow.');
       toaster.present();
     }
