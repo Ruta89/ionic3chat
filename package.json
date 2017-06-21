@@ -1,6 +1,6 @@
 {
     "name": "ionic3chat",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": "Ruta89",
     "homepage": "https://github.com/Ruta89/ionic3chat",
     "private": true,
@@ -12,7 +12,6 @@
         "ionic:serve": "ionic-app-scripts serve"
     },
     "dependencies": {
-        "dependencies": {
     "@angular/common": "4.1.3",
     "@angular/compiler": "4.1.3",
     "@angular/compiler-cli": "4.1.3",
