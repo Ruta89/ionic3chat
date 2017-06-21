@@ -1,9 +1,20 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>ProfilePic</ion-title>
+  <ion-navbar color="hcolor">
+    <ion-title>Zdjecie Profilowe</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <div class="profile-image">
+    <img src="{{imgurl}}">
+  </div>
+  <div>
+    <button ion-button round outline (click)="chooseimage()">Wybierz zdjecie</button>
+  </div>
+  <div [hidden]="!moveon">
+    <button ion-button round outline (click)="proceed()">Pomin</button>
+  </div>
+  <div [hidden]="moveon">
+    <button ion-button round outline (click)="updateproceed()">Zaladuj i przejdz dalej</button>
+  </div>
 </ion-content>
