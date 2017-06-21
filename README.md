@@ -1,26 +1,16 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
-## How to use this template
+#  Ionic3 angularfire2  chat app
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+### HomePage
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+![Alt text](/src/assets/img/slogin.png?raw=true "Login")
 
-### With the Ionic CLI:
+### Modals
+![Alt text](/src/assets/img/sprofile.png?raw=true "Profile")
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+## Tutorial 
+[Ionic Chat app with AngularFire2](http://tphangout.com/).
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
+### Ionic3 and 4.0.0-rc.1
 
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+Ionic3 angular4 angularfire2: 4.0.0-rc.1

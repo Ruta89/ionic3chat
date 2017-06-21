@@ -1,17 +1,18 @@
 {
-  "name": "ionic3chat",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
-  "private": true,
-  "scripts": {
-    "clean": "ionic-app-scripts clean",
-    "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint",
-    "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
-  },
-  "dependencies": {
+    "name": "ionic3chat",
+    "version": "0.0.2",
+    "author": "Ruta89",
+    "homepage": "https://github.com/Ruta89/ionic3chat",
+    "private": true,
+    "scripts": {
+        "clean": "ionic-app-scripts clean",
+        "build": "ionic-app-scripts build",
+        "lint": "ionic-app-scripts lint",
+        "ionic:build": "ionic-app-scripts build",
+        "ionic:serve": "ionic-app-scripts serve"
+    },
+    "dependencies": {
+        "dependencies": {
     "@angular/common": "4.1.3",
     "@angular/compiler": "4.1.3",
     "@angular/compiler-cli": "4.1.3",
@@ -31,12 +32,29 @@
     "promise-polyfill": "6.0.2",
     "rxjs": "5.4.0",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.12"
-  },
-  "devDependencies": {
-    "@ionic/app-scripts": "1.3.8",
-    "@ionic/cli-plugin-ionic-angular": "1.3.1",
-    "typescript": "2.3.3"
-  },
-  "description": "An Ionic project"
+    "zone.js": "0.8.12"          
+    },
+    "devDependencies": {
+        "@ionic/app-scripts": "1.3.8",
+        "@ionic/cli-plugin-cordova": "1.4.0",
+        "@ionic/cli-plugin-ionic-angular": "1.3.1",
+        "typescript": "2.3.4"
+    },
+    "description": "An Ionic project",
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-console": {},
+            "cordova-plugin-device": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "ionic-plugin-keyboard": {},
+            "cordova-plugin-filechooser": {},
+            "cordova-plugin-filepath": {},
+            "cordova-plugin-file": {}
+        },
+        "platforms": [
+            "android"
+        ]
+    }
 }
