@@ -8,6 +8,22 @@ export class UserProvider {
   constructor(public afireauth: AngularFireAuth) {
   }
 
+  getAllUsers() {
+    var promise = new Promise((resolve, reject) => {
+      this.firedata.orderByChild('uid').once('value', (snapshot) => {
+        let userdata = snapshot.val();
+        let temparr = [];
+        for (var key in userdata) {
+          temparr.push(userdata[key]);
+        }
+        resolve(temparr);
+      }).catch((err) => {
+        reject(err);
+      })
+    })
+    return promise;
+  }
+
   /*
   Adds a new user to the system.
   Called from - signup.ts
@@ -15,6 +31,7 @@ export class UserProvider {
   Outputs - Promise.
   
    */
+
 
   adduser(newuser) {
     var promise = new Promise((resolve, reject) => {
