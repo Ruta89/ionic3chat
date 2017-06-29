@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.ionic3chat" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Ionic3Chat</name>
+    <name>2_Ionic3Chat</name>
     <description> Ionic Cordova Chat app with firebase.</description>
     <author email="arek.ruta89@gmail.com" href="https://github.com/Ruta89/">Ruta89</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
+    <allow-navigation href="http://192.168.1.17:8100" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

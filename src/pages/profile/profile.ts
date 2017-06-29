@@ -2,7 +2,8 @@ import { Component, NgZone } from '@angular/core';
 import { AlertController, IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ImghandlerProvider } from '../../providers/img-handler/img-handler';
 import { UserProvider } from '../../providers/user/user';
-import firebase from 'firebase';
+import * as firebase from 'firebase/app';
+import 'firebase/storage';
 
 @IonicPage()
 @Component({
