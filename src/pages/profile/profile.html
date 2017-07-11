@@ -1,5 +1,10 @@
 <ion-header>
   <ion-navbar color="hcolor">
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>  
+      </button> 
+    </ion-buttons>
     <ion-title>Profile</ion-title>
   </ion-navbar>
 </ion-header>
@@ -13,10 +18,5 @@
   </div>
   <div>
     Tap on your pic or nick name to change it
-  </div>
-  <div class="spacer" style="height:10px;">
-    <div>
-      <button ion-button round outline color="danger" (click)="logout()">Wyloguj</button>
-    </div>
   </div>
 </ion-content>
