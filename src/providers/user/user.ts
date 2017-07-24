@@ -143,5 +143,27 @@ export class UserProvider {
     return promise;
   }
 
+  updateAvatar(newAvatar) {
+    var promise = new Promise((resolve, reject) => {
+      this.afireauth.auth.currentUser.updateProfile({
+        displayName: this.afireauth.auth.currentUser.displayName,
+        photoURL: newAvatar
+      }).then(() => {
+        this.firedata.child(firebase.auth().currentUser.uid).update({
+          displayName: this.afireauth.auth.currentUser.displayName,
+          photoURL: newAvatar,
+          uid: this.afireauth.auth.currentUser.uid
+        }).then(() => {
+          resolve({ success: true });
+        }).catch((err) => {
+          reject(err);
+        })
+      }).catch((err) => {
+        reject(err);
+      })
+    })
+    return promise;
+  }
+
 
 }
