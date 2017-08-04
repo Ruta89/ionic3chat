@@ -1,3 +1,4 @@
+import { ChatProvider } from './../../providers/chat/chat';
 import { RequestsProvider } from './../../providers/requests/requests';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events, AlertController } from 'ionic-angular';
@@ -14,7 +15,8 @@ export class ChatsPage {
     public navParams: NavParams,
     public requestService: RequestsProvider,
     public events: Events,
-    public alertCtrl: AlertController) {
+    public alertCtrl: AlertController,
+    public chatService: ChatProvider) {
   }
 
   ionViewWillEnter() {
@@ -33,7 +35,6 @@ export class ChatsPage {
   }
 
   ionViewDidLeave() {
-    console.log('ionViewDidLeave  this.events.unsubscribe( gotrequests );  ', this.requestService.userDetails);
     this.events.unsubscribe('gotrequests');
     this.events.unsubscribe('friends');
   }
@@ -67,6 +68,12 @@ export class ChatsPage {
       }).catch((err) => {
         alert(err)
       })
+  }
+
+  buddyChat(buddy) {
+    console.log('buddyChat(item)', buddy);
+    this.chatService.initializebuddy(buddy);
+    this.navCtrl.push('BuddyChatPage');
   }
 
 }
