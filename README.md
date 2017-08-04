@@ -8,6 +8,9 @@
 ### Modals
 ![Alt text](/src/assets/img/sprofile.png?raw=true "Profile")
 
+### Modals
+![Alt text](/src/assets/img/1.png?raw=true "Message")
+
 ## Tutorial 
 [Ionic Chat app with AngularFire2](http://tphangout.com/).
 
