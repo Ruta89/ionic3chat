@@ -3,13 +3,14 @@
     <ion-buttons end>
       <button ion-button icon-only (click)="logout()">
         <ion-icon name="log-out"></ion-icon>  
-      </button> 
+      </button>
     </ion-buttons>
     <ion-title>Profile</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <small>Kliknij aby edytowac</small>
   <div class="profile-image" (click)="editimage()">
     <img src="{{avatar}}">
   </div>
@@ -19,4 +20,13 @@
   <div>
     Tap on your pic or nick name to change it
   </div>
+  <!-- <ion-label fixed>Avatar</ion-label>
+  <ion-item (click)="editimage()">
+    <img src="{{avatar}}">
+  </ion-item>
+<ion-label fixed>Nazwa</ion-label>
+  <ion-item (click)="editname()">
+    {{displayName}}
+
+  </ion-item> -->
 </ion-content>

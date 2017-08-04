@@ -23,6 +23,9 @@ export class LoginPage {
         this.navCtrl.setRoot('TabsPage');
       else
         alert(res);
+      console.log('zalogowano ', res);
+    }).catch((err)=>{
+      console.log('blad logowania', err);
     })
   }
 

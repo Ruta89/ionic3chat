@@ -68,9 +68,9 @@
   version "3.12.1"
   resolved "https://registry.yarnpkg.com/@ionic-native/status-bar/-/status-bar-3.12.1.tgz#5b2491b43a3d7e08d65ac0e9fdb1927493e32472"
 
-"@ionic/app-scripts@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@ionic/app-scripts/-/app-scripts-2.0.0.tgz#cb1057c966849d6e6ea837209ebb4ff6fb065f27"
+"@ionic/app-scripts@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@ionic/app-scripts/-/app-scripts-2.0.1.tgz#62027703595d4b77ee8805c328717d1d1ce7e713"
   dependencies:
     autoprefixer "7.1.1"
     babili "0.1.2"
@@ -103,27 +103,28 @@
     ws "1.1.1"
     xml2js "0.4.17"
 
-"@ionic/cli-plugin-cordova@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@ionic/cli-plugin-cordova/-/cli-plugin-cordova-1.4.0.tgz#2d3dd7bbd7321e0f1994b6f1a217176f55145296"
+"@ionic/cli-plugin-cordova@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@ionic/cli-plugin-cordova/-/cli-plugin-cordova-1.4.1.tgz#d8fa1b4dd1a7e6f09b18e751e2c363e186bb6d8d"
   dependencies:
-    "@ionic/cli-utils" "1.4.0"
-    chalk "^1.1.3"
+    "@ionic/cli-utils" "1.5.0"
+    chalk "^2.0.0"
     xml2js "^0.4.17"
 
-"@ionic/cli-plugin-ionic-angular@1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@ionic/cli-plugin-ionic-angular/-/cli-plugin-ionic-angular-1.3.1.tgz#8985f5a520db97ed6206615464e173d086ecd1ea"
+"@ionic/cli-plugin-ionic-angular@1.32":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@ionic/cli-plugin-ionic-angular/-/cli-plugin-ionic-angular-1.3.2.tgz#bdca59f27a337918f70653f674d7f80903596464"
   dependencies:
-    "@ionic/cli-utils" "1.4.0"
-    chalk "^1.1.3"
+    "@ionic/cli-utils" "1.5.0"
+    chalk "^2.0.0"
 
-"@ionic/cli-utils@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@ionic/cli-utils/-/cli-utils-1.4.0.tgz#78c70b69c3b98a463aa01ea507d7d01da3dfa675"
+"@ionic/cli-utils@1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@ionic/cli-utils/-/cli-utils-1.5.0.tgz#1806fd4f93c0acb80d2509f43c6380b655fc928f"
   dependencies:
     archiver "^1.3.0"
-    chalk "^1.1.3"
+    chalk "^2.0.0"
+    ci-info "^1.0.0"
     cross-spawn "^4.0.2"
     dargs "^5.1.0"
     inquirer "^3.0.6"
@@ -131,11 +132,11 @@
     lodash "^4.17.4"
     minimist "^1.2.0"
     ncp "^2.0.0"
-    os-name "^2.0.1"
     rimraf "^2.5.4"
     semver "^5.3.0"
-    slice-ansi "0.0.4"
-    string-width "^2.0.0"
+    slice-ansi "^1.0.0"
+    string-width "^2.1.0"
+    strip-ansi "^4.0.0"
     superagent "^3.5.2"
     uuid "^3.0.1"
     wrap-ansi "^2.1.0"
@@ -976,6 +977,10 @@ chokidar@1.7.0, chokidar@^1.4.3, chokidar@^1.6.1:
   optionalDependencies:
     fsevents "^1.0.0"
 
+ci-info@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.0.0.tgz#dc5285f2b4e251821683681c381c3388f46ec534"
+
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/cipher-base/-/cipher-base-1.0.4.tgz#8760e4ecc272f4c363532f926d874aae2c1397de"
@@ -1048,13 +1053,13 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@2.8.x, commander@^2.8.1:
+commander@2.8.x:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.8.1.tgz#06be367febfda0c330aa1e2a072d3dc9762425d4"
   dependencies:
     graceful-readlink ">= 1.0.0"
 
-commander@^2.9.0, commander@~2.9.0:
+commander@^2.8.1, commander@^2.9.0, commander@~2.9.0:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.9.0.tgz#9c99094176e12240cb22d6c5146098400fe0f7d4"
   dependencies:
@@ -1311,13 +1316,13 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
-debug@2.6.7:
+debug@2.6.7, debug@^2.1.0, debug@^2.1.1, debug@^2.2.0:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.7.tgz#92bad1f6d05bbb6bba22cca88bcd0ec894c2861e"
   dependencies:
     ms "2.0.0"
 
-debug@^2.1.0, debug@^2.1.1, debug@^2.2.0, debug@~2.2.0:
+debug@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
   dependencies:
@@ -1886,7 +1891,7 @@ glob-parent@^2.0.0:
   dependencies:
     is-glob "^2.0.0"
 
-glob@7.1.1:
+glob@7.1.1, glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@~7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
   dependencies:
@@ -1904,17 +1909,6 @@ glob@^5.0.13:
     inflight "^1.0.4"
     inherits "2"
     minimatch "2 || 3"
-    once "^1.3.0"
-    path-is-absolute "^1.0.0"
-
-glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@~7.1.1:
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
-  dependencies:
-    fs.realpath "^1.0.0"
-    inflight "^1.0.4"
-    inherits "2"
-    minimatch "^3.0.4"
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
@@ -3016,7 +3010,7 @@ os-locale@^1.4.0:
   dependencies:
     lcid "^1.0.0"
 
-os-name@2.0.1, os-name@^2.0.1:
+os-name@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/os-name/-/os-name-2.0.1.tgz#b9a386361c17ae3a21736ef0599405c9a8c5dc5e"
   dependencies:
@@ -3654,9 +3648,11 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
 
-slice-ansi@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/slice-ansi/-/slice-ansi-0.0.4.tgz#edbf8903f66f7ce2f8eafd6ceed65e264c831b35"
+slice-ansi@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/slice-ansi/-/slice-ansi-1.0.0.tgz#044f1a49d8842ff307aad6b505ed178bd950134d"
+  dependencies:
+    is-fullwidth-code-point "^2.0.0"
 
 sntp@1.x.x:
   version "1.0.9"
@@ -3761,7 +3757,7 @@ string-width@^1.0.1, string-width@^1.0.2:
     is-fullwidth-code-point "^1.0.0"
     strip-ansi "^3.0.0"
 
-string-width@^2.0.0, string-width@^2.1.0:
+string-width@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-2.1.0.tgz#030664561fc146c9423ec7d978fe2457437fe6d0"
   dependencies:
