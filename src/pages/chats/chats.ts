@@ -71,7 +71,6 @@ export class ChatsPage {
   }
 
   buddyChat(buddy) {
-    console.log('buddyChat(item)', buddy);
     this.chatService.initializebuddy(buddy);
     this.navCtrl.push('BuddyChatPage');
   }
