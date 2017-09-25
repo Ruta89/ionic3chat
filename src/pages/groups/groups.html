@@ -1,9 +1,26 @@
 <ion-header>
   <ion-navbar color="hcolor">
-    <ion-title>groups</ion-title>
+    <ion-title>Grupy</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addGroup()">
+       <ion-icon name="contacts"></ion-icon>  
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+
+  <ion-list no-lines>
+    <ion-list-header>
+      Moje Grupy
+    </ion-list-header>
+    <ion-item *ngFor="let item of allMyGroups">
+      <ion-avatar item-left>
+        <img src="{{ item.groupImage }}">
+      </ion-avatar>
+      <h3 (click)="openChat(item)">{{ item.groupName }}</h3>
+    </ion-item>
+  </ion-list>
 
 </ion-content>

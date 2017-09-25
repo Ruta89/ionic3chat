@@ -9,7 +9,6 @@ import { FilePath } from '@ionic-native/file-path';
 import { FileChooser } from '@ionic-native/file-chooser';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 
 import { config } from '../config/config';
 import { AngularFireModule } from 'angularfire2';
@@ -19,22 +18,17 @@ import { UserProvider } from '../providers/user/user';
 import { ImghandlerProvider } from '../providers/img-handler/img-handler';
 import { RequestsProvider } from '../providers/requests/requests';
 import { ChatProvider } from '../providers/chat/chat';
+import { GroupsProvider } from '../providers/groups/groups';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    HomePage
-  ],
+  declarations: [MyApp],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp, { tabsPlacement: 'top' }),
     AngularFireModule.initializeApp(config.firebase)
   ],
   bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage
-  ],
+  entryComponents: [MyApp],
   providers: [
     StatusBar,
     SplashScreen,
@@ -47,7 +41,8 @@ import { ChatProvider } from '../providers/chat/chat';
     UserProvider,
     ImghandlerProvider,
     RequestsProvider,
-    ChatProvider
+    ChatProvider,
+    GroupsProvider
   ]
 })
-export class AppModule { }
+export class AppModule {}

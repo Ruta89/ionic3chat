@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Dodaj nową grupę</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="profile-image" (click)="chooseImage()">
+    <img src="{{newGroup.groupPic}}">
+  </div>
+
+  <div>
+    <h2 (click)="editGroupName()">
+      {{newGroup.groupName}}
+    </h2>
+  </div>
+
+  <div>
+    Kliknij na obrazek lub nazwę grupy aby zmienic.
+  </div>
+
+  <div class="spacer" style="height: 10px;">
+  </div>
+
+  <div>
+    <button ion-button round outline (click)="createGroup()">Zaloz Grupe</button>
+  </div>
+
+</ion-content>
