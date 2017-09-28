@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Events } from 'ionic-angular';
-import * as firebase from 'firebase/app';
+import firebase from 'firebase';
 
 @Injectable()
 export class ChatProvider {

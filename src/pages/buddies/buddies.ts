@@ -4,7 +4,7 @@ import { RequestsProvider } from './../../providers/requests/requests';
 import { AuthProvider } from './../../providers/auth/auth';
 import { UserProvider } from './../../providers/user/user';
 import { connreq } from './../../models/interfaces/request';
-
+import firebase from 'firebase';
 @IonicPage()
 @Component({
   selector: 'page-buddies',
