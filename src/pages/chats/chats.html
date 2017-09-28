@@ -12,7 +12,7 @@
 <ion-content padding>
   <ion-list no-lines>
     <ion-list-header>
-      Requests
+      Zaproszenia
     </ion-list-header>
     <ion-item-sliding *ngFor="let item of myRequests">
       <ion-item>
@@ -24,12 +24,12 @@
       <ion-item-options>
         <button ion-button color="secondary" (click)="accept(item)">
             <ion-icon name="checkmark"></ion-icon>  
-            ADD
+            DODAJ
           </button>
 
         <button ion-button color="danger" (click)="ignore(item)">
             <ion-icon name="trash"></ion-icon>  
-            NOPE
+            NIE
           </button>
       </ion-item-options>
     </ion-item-sliding>

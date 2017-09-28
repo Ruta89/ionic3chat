@@ -12,12 +12,12 @@
         </ion-item>
         <div class="spacer" style="height: 5px;"></div>
         <ion-item>
-          <ion-input type="password" placeholder="Password" [(ngModel)]="credentials.password"></ion-input>
+          <ion-input type="password" placeholder="Password" [(ngModel)]="credentials.password" (keyup.enter)="signIn()"></ion-input>
         </ion-item>
         <div class="spacer" style="height: 10px;"></div>
         <a (click)="passwordReset()">Zapomniales hasla ? <b> Pomoc </b></a>
         <div class="spacer" style="height: 10px;"></div>
-        <button ion-button block round outline color="light" (click)="signin()">Zaloguj</button>
+        <button ion-button block round outline color="light" (click)="signIn()">Zaloguj</button>
         <div class="spacer" style="height: 10px;"></div>
         <p>Lub</p>
         <div class="spacer" style="height: 10px;"></div>

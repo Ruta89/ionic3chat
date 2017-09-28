@@ -1,6 +1,6 @@
 import { AuthProvider } from '../../providers/auth/auth';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Loading, LoadingController, AlertController } from 'ionic-angular';
 import { usercreds } from '../../models/interfaces/usercreds';
 @IonicPage()
 @Component({
@@ -8,8 +8,9 @@ import { usercreds } from '../../models/interfaces/usercreds';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  loading: Loading;
   credentials = {} as usercreds;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public authService: AuthProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public authService: AuthProvider, public loadingCtrl: LoadingController, public alertCtrl : AlertController) {
 
   }
 
@@ -17,16 +18,30 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  signin() {
-    this.authService.login(this.credentials).then((res: any) => {
-      if (!res.code)
-        this.navCtrl.setRoot('TabsPage');
-      else
-        alert(res);
-      console.log('zalogowano ', res);
-    }).catch((err)=>{
-      console.log('blad logowania', err);
-    })
+  signIn() {
+    this.loading = this.loadingCtrl.create({
+      content: 'Logowanie ...'
+    });
+    this.loading.present();
+
+    this.authService.login(this.credentials).then(data => {
+      this.loading.dismiss();
+    }),
+      error => {
+        this.loading.dismiss().then(() => {
+          let alert = this.alertCtrl.create({
+            title: 'Blad logowania',
+            message: error.message,
+            buttons: [
+              {
+                text: 'OK',
+                role: 'cancel'
+              }
+            ]
+          });
+          alert.present();
+        });
+      };
   }
 
   passwordReset() {
