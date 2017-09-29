@@ -58,7 +58,7 @@ export class GroupsProvider {
       this.fireGroup
         .child(firebase.auth().currentUser.uid)
         .child(groupName)
-        .once('value', (snapshot) => {
+        .once('value', snapshot => {
           if (snapshot.val() != null) {
             var temp = snapshot.val().members;
             this.currentGroup = [];
@@ -97,7 +97,7 @@ export class GroupsProvider {
       this.fireGroup
         .child(firebase.auth().currentUser.uid)
         .child(this.currentGroupName)
-        .once('value', (snapshot) => {
+        .once('value', snapshot => {
           this.groupPic = snapshot.val().groupImage;
           resolve(true);
         });
@@ -126,5 +126,45 @@ export class GroupsProvider {
         });
         this.getIntoGroup(this.currentGroupName);
       });
+  }
+
+  deleteMember(member) {
+    this.fireGroup
+      .child(firebase.auth().currentUser.uid)
+      .child(this.currentGroupName)
+      .child('members')
+      .orderByChild('uid')
+      .equalTo(member.uid)
+      .once('value', snapshot => {
+        snapshot.ref.remove().then(() => {
+          this.fireGroup
+            .child(member.uid)
+            .child(this.currentGroupName)
+            .remove()
+            .then(() => {
+              this.getIntoGroup(this.currentGroupName);
+            });
+        });
+      });
+  }
+
+  getGroupMembers() {
+    this.fireGroup
+      .child(firebase.auth().currentUser.uid)
+      .child(this.currentGroupName)
+      .once('value', snapshot => {
+        var tempData = snapshot.val().owner;
+        this.fireGroup
+          .child(tempData)
+          .child(this.currentGroupName)
+          .child('members')
+          .once('value', snapshot => {
+            var tempVar = snapshot.val();
+            for (var key in tempVar) {
+              this.currentGroup.push(tempVar[key]);
+            }
+          });
+      });
+    this.events.publish('gotMembers');
   }
 }
